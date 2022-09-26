@@ -1,4 +1,11 @@
-import { Container, Row, Col, FormGroup, Button, Title } from '../components/Layouts';
+import {
+    Container,
+    Row,
+    Col,
+    FormGroup,
+    Button,
+    Title
+} from '@styles';
 
 function SignIn() {
 
@@ -10,7 +17,7 @@ function SignIn() {
                 <Title>Identifique-se</Title>
 
                 <form
-                    name="auth"
+                    name="signIn"
                     onSubmit={() => { }}
                 >
 
@@ -25,9 +32,6 @@ function SignIn() {
                                 />
                             </FormGroup>
                         </Col>
-                    </Row>
-
-                    <Row>
                         <Col>
                             <FormGroup>
                                 <label htmlFor="password">Senha</label>
@@ -41,7 +45,7 @@ function SignIn() {
                     </Row>
 
                     <Button>
-                        Enviar
+                        Entrar
                     </Button>
 
                 </form>

@@ -1,4 +1,11 @@
-import { Container, Row, Col, FormGroup, Button, Title } from '../components/Layouts';
+import {
+    Container,
+    Row,
+    Col,
+    FormGroup,
+    Button,
+    Title
+} from '@styles';
 
 function SignUp() {
 
@@ -10,7 +17,7 @@ function SignUp() {
                 <Title>Faça seu cadastro</Title>
 
                 <form
-                    name="register"
+                    name="signUp"
                     onSubmit={() => { }}
                 >
 
