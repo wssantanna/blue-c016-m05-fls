@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import {
     Container,
     Row,
@@ -9,6 +10,10 @@ import {
 
 function SignUp() {
 
+
+    useEffect(() => {
+
+    });
 
     return (
         <>

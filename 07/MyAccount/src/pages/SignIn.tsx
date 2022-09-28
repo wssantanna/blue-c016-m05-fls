@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
     Container,
     Row,
@@ -9,6 +11,7 @@ import {
 
 function SignIn() {
 
+    const [credential, setCredential] = useState({});
 
     return (
         <>
@@ -28,6 +31,7 @@ function SignIn() {
                                 <input
                                     name="email"
                                     type="email"
+                                    id='email'
                                     placeholder='Digite sua credencial'
                                 />
                             </FormGroup>
@@ -38,6 +42,7 @@ function SignIn() {
                                 <input
                                     name="password"
                                     type="password"
+                                    id='password'
                                     placeholder='Digite sua senha'
                                 />
                             </FormGroup>

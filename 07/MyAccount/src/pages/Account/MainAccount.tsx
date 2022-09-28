@@ -4,7 +4,6 @@ import Sidebar from '@components/Sidebar';
 
 function MainAccount() {
 
-
     return (
         <>
             <Sidebar />

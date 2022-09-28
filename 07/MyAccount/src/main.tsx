@@ -5,11 +5,11 @@ import { RouterProvider } from 'react-router-dom';
 
 import { GlobalStyle } from '@styles';
 
-import Mock from './mock';
-
 import Router from './routers';
 
-new Mock();
+import Mock from './mock';
+
+Mock.Initialize();
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
