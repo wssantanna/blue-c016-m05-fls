@@ -1,9 +1,5 @@
 import { useState } from 'react';
 
-import AuthService from '../services/AuthService';
-
-import ICredential from '../interfaces/Credential';
-
 import {
     Container,
     Row,
@@ -13,7 +9,9 @@ import {
     Title
 } from '@styles';
 
+import ICredential from '@interfaces/Credential';
 
+import AuthService from '@services/AuthService';
 
 function SignIn() {
 
@@ -47,9 +45,9 @@ function SignIn() {
                             <FormGroup>
                                 <label htmlFor="email">E-mail</label>
                                 <input
-                                    name="email"
                                     type="email"
                                     id='email'
+                                    autoComplete='username'
                                     placeholder='Digite sua credencial'
                                     onChange={(e) => { setUsername(e.target.value) }}
                                 />
@@ -59,9 +57,9 @@ function SignIn() {
                             <FormGroup>
                                 <label htmlFor="password">Senha</label>
                                 <input
-                                    name="password"
                                     type="password"
                                     id='password'
+                                    autoComplete='current-password'
                                     placeholder='Digite sua senha'
                                     onChange={(e) => { setPassword(e.target.value) }}
                                 />

@@ -1,6 +1,6 @@
-import ICredential from '../interfaces/Credential';
-import IRegistration from '../interfaces/Registration';
-import IAuthorization from '../interfaces/Autorization';
+import ICredential from '@interfaces/Credential';
+import IRegistration from '@interfaces/Registration';
+import IAuthorization from '@interfaces/Autorization';
 
 type AuthorizationResponse = IAuthorization | false;
 
@@ -11,9 +11,9 @@ class AuthService {
             method: 'POST',
             body: JSON.stringify(credential)
         });
-        const authorization: AuthorizationResponse = await require.json();
+        const currentAuthorization: AuthorizationResponse = await require.json();
 
-        return authorization;
+        return currentAuthorization;
     }
 
     static async RegisterUser(userRegistration: IRegistration): Promise<boolean> {

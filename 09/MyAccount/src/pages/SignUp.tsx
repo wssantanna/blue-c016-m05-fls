@@ -1,4 +1,5 @@
 import { useState } from 'react';
+
 import {
     Container,
     Row,
@@ -47,7 +48,6 @@ function SignUp() {
                             <FormGroup>
                                 <label htmlFor="name">Nome</label>
                                 <input
-                                    name="name"
                                     type="text"
                                     placeholder='Digite seu nome completo'
                                     onChange={(e) => { setFullname(e.target.value) }}
@@ -61,7 +61,6 @@ function SignUp() {
                             <FormGroup>
                                 <label htmlFor="email">E-mail</label>
                                 <input
-                                    name="email"
                                     type="email"
                                     placeholder='Digite seu e-mail de cadastro'
                                     onChange={(e) => { setEmail(e.target.value) }}
@@ -73,7 +72,6 @@ function SignUp() {
                             <FormGroup>
                                 <label htmlFor="reemail">Confirme seu e-mail</label>
                                 <input
-                                    name="reemail"
                                     type="email"
                                     placeholder='Confirme o e-mail'
                                     onChange={(e) => { setConfirmEmail(e.target.value) }}

@@ -33,7 +33,16 @@
       ],
       "@components/*": [
         "./src/components"
-      ]
+      ],
+      "@services/*": [
+        "./src/services"
+      ],
+      "@contexts/*": [
+        "./src/contexts"
+      ],
+      "@interfaces/*": [
+        "./src/interfaces"
+      ],
     }
   },
   "include": [
