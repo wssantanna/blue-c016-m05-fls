@@ -1,0 +1,52 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// 1) Um para Um - One To One
+
+model User {
+  id         Int         @id @default(autoincrement())
+  firstName  String
+  lastName   String
+  credential Credential?
+  orders     Order[]
+}
+
+model Credential {
+  id       Int    @id @default(autoincrement())
+  email    String @unique
+  password String
+  user     User   @relation(fields: [userId], references: [id])
+  userId   Int    @unique
+}
+
+// 2) Um para muitos
+
+model Order {
+  id     Int  @id @default(autoincrement())
+  idUser Int
+  user   User @relation(fields: [idUser], references: [id])
+}
+
+// 3) Muitos para Muitos - Many to many
+
+model Product {
+  id          Int        @id @default(autoincrement())
+  name        String
+  description String?
+  price       Int?
+  categories  Category[]
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  products Product[]
+}
